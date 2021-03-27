@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ghostWhite"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/pokedex_logo"
+        android:layout_width="417dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/pok_dex_logo"
+        app:layout_constraintBottom_toTopOf="@id/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/about_app"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/more"
+        android:onClick="aboutApp"
+        app:layout_constraintBottom_toBottomOf="@id/pokedex_logo"
+        app:layout_constraintEnd_toEndOf="@id/pokedex_logo"
+        app:layout_constraintTop_toTopOf="@id/pokedex_logo" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_corner"
+        android:focusable="false"
+        android:inputType="text"
+        android:paddingBottom="3dp"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pokedex_logo" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+    <com.nambimobile.widgets.efab.ExpandableFabLayout
+        android:id="@+id/expandable_fab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.nambimobile.widgets.efab.Overlay
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay_alpha="0.50"
+            app:overlay_openingAnimationDurationMs="1000" />
+
+        <com.nambimobile.widgets.efab.ExpandableFab
+            android:id="@+id/expandable_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:efab_closingAnticipateTension="0"
+            app:efab_color="#9374DE"
+            app:efab_icon="@drawable/filter"
+            app:efab_iconAnimationRotationDeg="180"
+            app:efab_size="normal" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/fire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="fire"
+            app:fabSize="normal"
+            app:fab_color="@color/fireDark"
+            app:fab_icon="@drawable/fire"
+            app:label_backgroundColor="@color/fireLight"
+            app:label_text="fire"
+            app:label_textColor="@color/white" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Water"
+            app:fabSize="normal"
+            app:fab_color="@color/waterDark"
+            app:fab_icon="@drawable/water"
+            app:label_backgroundColor="@color/watersLight"
+            app:label_text="water" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/electric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="electric"
+            app:fabCustomSize="60dp"
+            app:fabSize="normal"
+            app:fab_color="#FFE6DA6B"
+            app:fab_icon="@drawable/lightning"
+            app:label_backgroundColor="@color/electricLight"
+            app:label_text="electric" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/grass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="grass"
+            app:fabCustomSize="60dp"
+            app:fabSize="normal"
+            app:fab_color="#AEE8A7"
+            app:fab_icon="@drawable/grass"
+            app:label_backgroundColor="@color/grassLight"
+            app:label_text="grass" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/psychic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="psychic"
+            app:fabCustomSize="60dp"
+            app:fabSize="normal"
+            app:fab_color="#DCA3F3"
+            app:fab_icon="@drawable/psychic"
+            app:label_backgroundColor="@color/bugLight"
+            app:label_text="psychic" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/dragon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="dragon"
+            app:fabCustomSize="60dp"
+            app:fabSize="normal"
+            app:fab_color="@color/dragonLight"
+            app:fab_icon="@drawable/dragon_1"
+            app:label_backgroundColor="@color/dragonDark"
+            app:label_text="dragon" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/rock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="rock"
+            app:fabCustomSize="60dp"
+            app:fabSize="normal"
+            app:fab_color="#AEABAF"
+            app:fab_icon="@drawable/rock"
+            app:label_backgroundColor="@color/defaultLight"
+            app:label_text="rock" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/ice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="ice"
+            app:fabCustomSize="60dp"
+            app:fabSize="normal"
+            app:fab_color="#5FA8CF"
+            app:fab_icon="@drawable/ice"
+            app:label_backgroundColor="#06D6F1"
+            app:label_text="ice" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/fighting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="fighting"
+            app:fabCustomSize="60dp"
+            app:fabSize="normal"
+            app:fab_color="#DDA078"
+            app:fab_icon="@drawable/fighting"
+            app:label_backgroundColor="#E17D39"
+            app:label_text="fighting" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="all"
+            app:fabCustomSize="60dp"
+            app:fabSize="normal"
+            app:fab_color="@color/white"
+            app:fab_icon="@drawable/pokeball_2"
+            app:label_backgroundColor="@color/black"
+            app:label_text="all" />
+
+    </com.nambimobile.widgets.efab.ExpandableFabLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

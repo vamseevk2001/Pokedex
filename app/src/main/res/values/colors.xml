@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ghostWhite">#ededed</color>
+    <color name="lightGreen"> #89C893</color>
+    <color name="grass">#49896F</color>
+    <color name="blue">#0000FF</color>
+
+
+    <color name="grassLight">#4FC83F</color>
+    <color name="grassDark">#FF349727</color>
+
+    <color name="fireLight">#F7786B</color>
+    <color name="fireDark">#e65c4e</color>
+
+    <color name="watersLight">#4bdff2</color>
+    <color name="waterDark">#229dc9</color>
+
+    <color name="electricLight">#FFECC868</color>
+    <color name="electricDark">#f6c747</color>
+
+    <color name="bugDark">#9F5BBA</color>
+    <color name="bugLight">#7C538C</color>
+
+    <color name="groundLight">#CA8179</color>
+    <color name="groundDark">#B1736C</color>
+
+    <color name="normalLight">#68e3c6</color>
+    <color name="normalDark">#3ead93</color>
+
+    <color name="defaultLight">#b5baaf</color>
+    <color name="defaultDark">#c9c9c9</color>
+
+    <color name="dragonLight">#FFDD6D59</color>
+    <color name="dragonDark">#FFF6693A</color>
+
+
+
+</resources>
