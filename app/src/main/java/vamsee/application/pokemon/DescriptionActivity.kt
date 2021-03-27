@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
@@ -161,8 +162,8 @@ class DescriptionActivity : AppCompatActivity() {
 
         val bg = binding.descriptionBg
         val pokeball = binding.pokeball
-        val type1 = binding.type1
-        val type2 = binding.type2
+        val type1 = binding.pokeType1
+        val type2 = binding.pokeType2
 
         when(type){
             "Grass" -> {
@@ -200,11 +201,11 @@ class DescriptionActivity : AppCompatActivity() {
 
     }
 
-    private fun viewBg(bg: ConstraintLayout, pokeball: ImageView, type1: TextView, type2: TextView, light: Int, dark: Int){
+    private fun viewBg(bg: ConstraintLayout, pokeball: ImageView, type1: CardView, type2: CardView, light: Int, dark: Int){
         bg.setBackgroundColor(bg.context.resources.getColor(light))
         pokeball.setColorFilter(dark)
-        type1.setBackgroundColor(bg.context.resources.getColor(dark))
-        type2.setBackgroundColor(bg.context.resources.getColor(dark))
+        type1.setCardBackgroundColor(bg.context.resources.getColor(dark))
+        type2.setCardBackgroundColor(bg.context.resources.getColor(dark))
     }
 
 }

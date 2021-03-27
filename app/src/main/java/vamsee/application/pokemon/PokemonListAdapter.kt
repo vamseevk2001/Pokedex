@@ -57,42 +57,42 @@ class PokemonListAdapter(private val listener: PokeClick): RecyclerView.Adapter<
 
         ).into(holder.img)
         holder.name.text = currentItem.name
-        holder.type.text = currentItem.type[0] as CharSequence?
+        holder.pokeType.text = currentItem.type[0] as CharSequence?
         when(currentItem.type[0] as CharSequence?){
             "Grass" -> {
-                holder.type.setBackgroundResource(R.color.grassDark)
+                holder.type.setCardBackgroundColor(holder.type.context.resources.getColor(R.color.grassDark))
                 holder.card.setCardBackgroundColor(color)
             }
             "Fire" -> {
-                holder.type.setBackgroundResource(R.color.fireDark)
+                holder.type.setCardBackgroundColor(holder.type.context.resources.getColor(R.color.fireDark))
                 holder.card.setCardBackgroundColor(holder.card.context.resources.getColor(R.color.fireLight))
             }
             "Water" -> {
-                holder.type.setBackgroundResource(R.color.waterDark)
+                holder.type.setCardBackgroundColor(holder.type.context.resources.getColor(R.color.waterDark))
                 holder.card.setCardBackgroundColor(holder.card.context.resources.getColor(R.color.watersLight))
             }
             "Electric" -> {
-                holder.type.setBackgroundResource(R.color.electricDark)
+                holder.type.setCardBackgroundColor(holder.type.context.resources.getColor(R.color.electricDark))
                 holder.card.setCardBackgroundColor(holder.card.context.resources.getColor(R.color.electricLight))
             }
             "Bug", "Poison" -> {
-                holder.type.setBackgroundResource(R.color.bugDark)
+                holder.type.setCardBackgroundColor(holder.type.context.resources.getColor(R.color.bugDark))
                 holder.card.setCardBackgroundColor(holder.card.context.resources.getColor(R.color.bugLight))
             }
             "Ground" -> {
-                holder.type.setBackgroundResource(R.color.groundDark)
+                holder.type.setCardBackgroundColor(holder.type.context.resources.getColor(R.color.groundDark))
                 holder.card.setCardBackgroundColor(holder.card.context.resources.getColor(R.color.groundLight))
             }
             "Normal", "Psychic" -> {
-                holder.type.setBackgroundResource(R.color.normalDark)
+                holder.type.setCardBackgroundColor(holder.type.context.resources.getColor(R.color.normalDark))
                 holder.card.setCardBackgroundColor(holder.card.context.resources.getColor(R.color.normalLight))
             }
             "Dragon" -> {
-                holder.type.setBackgroundColor(holder.card.context.resources.getColor(R.color.dragonDark))
+                holder.type.setCardBackgroundColor(holder.type.context.resources.getColor(R.color.dragonDark))
                 holder.card.setCardBackgroundColor(holder.card.context.resources.getColor(R.color.dragonLight))
             }
             else -> {
-                holder.type.setBackgroundResource(R.color.defaultDark)
+                holder.type.setCardBackgroundColor(holder.type.context.resources.getColor(R.color.defaultDark))
                 holder.card.setCardBackgroundColor(holder.card.context.resources.getColor(R.color.defaultLight))
             }
         }
@@ -118,7 +118,8 @@ class PokemonListAdapter(private val listener: PokeClick): RecyclerView.Adapter<
 class PokeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
     val img: ImageView = itemView.findViewById(R.id.pokemon)
     val name: TextView = itemView.findViewById(R.id.poke_name)
-    val type: TextView = itemView.findViewById(R.id.type)
+    val type: CardView = itemView.findViewById(R.id.type)
+    val pokeType: TextView = itemView.findViewById(R.id.pokeType)
     val card: CardView = itemView.findViewById(R.id.card)
     val loader: LottieAnimationView = itemView.findViewById(R.id.loading)
 }

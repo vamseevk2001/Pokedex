@@ -59,22 +59,22 @@
             android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:layout_gravity="bottom"
         android:layout_marginBottom="10dp"
         app:cardCornerRadius="10dp"
+        android:alpha="0.8"
         app:cardElevation="5dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true">
 
         <TextView
-            android:id="@+id/type"
+            android:id="@+id/pokeType"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.8"
-            android:background="@color/waterDark"
             android:textAlignment="center"
             android:padding="4dp"
             android:fontFamily="sans-serif"
