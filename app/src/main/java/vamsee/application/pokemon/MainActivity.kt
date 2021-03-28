@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.airbnb.lottie.LottieAnimationView
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonArrayRequest
 import org.json.JSONArray
@@ -47,6 +48,8 @@ class MainActivity : AppCompatActivity(), PokeClick, SearchView.OnQueryTextListe
     private fun loadPoke() {
         val url = "https://gist.githubusercontent.com/mrcsxsiq/b94dbe9ab67147b642baa9109ce16e44/raw/97811a5df2df7304b5bc4fbb9ee018a0339b8a38/"
         //JSON Array  REQUEST:
+        val loader: LottieAnimationView = findViewById(R.id.recyclerViewLoader)
+        loader.visibility = View.VISIBLE
         val jsonArrayRequest = JsonArrayRequest(Request.Method.GET, url, null, { response ->
             Log.d("tag", response.toString())
             for (i in 0 until response.length()) {
@@ -75,12 +78,16 @@ class MainActivity : AppCompatActivity(), PokeClick, SearchView.OnQueryTextListe
                 mPokeArray.add(pokemon)
             }
             mAdapter.updatePokemons(mPokeArray)
+            loader.visibility = View.GONE
+
         }, { _ ->
             Toast.makeText(
                 this,
                 "Please check your internet connection!",
                 Toast.LENGTH_LONG
             ).show()
+
+            loader.visibility = View.GONE
         })
         MySingleton.getInstance(this).addToRequestQueue(jsonArrayRequest)
     }

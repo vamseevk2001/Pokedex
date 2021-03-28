@@ -11,8 +11,8 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="4dp"
             android:src="@drawable/logo"
+            android:padding="10dp"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,18 +29,29 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/intro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="This is a Pokedex app that has the information of almost all the pokemon from all the regions. You can filter out pokemon based on their type. You can even search for pokemon by their name. \n\n Developed by: \n V Vamsee Krishna \n vamseevk2001@gmail.com"
+            android:text="This is a Pokedex app that has the data of almost all the pokemon of all the regions. You can filter out pokemon based on their type. You can even search for pokemon by their name.\n"
             android:textSize="18sp"
             android:textColor="@color/black"
-
-            android:textStyle="italic|bold"
+            android:textStyle="italic"
             android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
             app:layout_constraintVertical_bias="0.074" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developed by: \n\n V Vamsee Krishna \n vamseevk2001@gmail.com"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/intro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

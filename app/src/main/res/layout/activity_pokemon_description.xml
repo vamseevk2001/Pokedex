@@ -32,11 +32,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginStart="12dp"
+        android:alpha="0.8"
+        app:cardBackgroundColor="@color/black"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
         app:cardPreventCornerOverlap="true"
-        android:alpha="0.8"
-        app:cardBackgroundColor="@color/black"
         app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="@+id/poke_type_2"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,9 +62,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginTop="4dp"
-        app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="@color/black"
         android:alpha="0.8"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
@@ -85,18 +85,17 @@
     </androidx.cardview.widget.CardView>
 
 
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/loader"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="@id/pokemon_image"
         app:layout_constraintBottom_toBottomOf="@id/pokemon_image"
-        app:layout_constraintStart_toStartOf="@id/pokemon_image"
         app:layout_constraintEnd_toEndOf="@id/pokemon_image"
-        app:lottie_rawRes="@raw/loading"
+        app:layout_constraintStart_toStartOf="@id/pokemon_image"
+        app:layout_constraintTop_toTopOf="@id/pokemon_image"
         app:lottie_autoPlay="true"
-        app:lottie_loop="true" />
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
 
 
     <ImageView
@@ -106,20 +105,21 @@
         android:layout_above="@+id/cardView2"
         android:layout_centerInParent="true"
         android:layout_marginTop="300dp"
-        android:src="@drawable/dragon_1"
         android:adjustViewBounds="true"
         android:elevation="8dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/dragon_1"
         app:layout_constraintBottom_toTopOf="@id/relativeLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.832"
         tools:ignore="NotSibling" />
+
     <ImageView
         android:id="@+id/pokeball"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="345dp"
+        android:layout_height="321dp"
         android:layout_above="@+id/cardView2"
         android:layout_centerVertical="true"
         android:layout_marginStart="230dp"
@@ -128,20 +128,20 @@
         android:backgroundTint="@color/grass"
         app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="1.5"
         tools:ignore="NotSibling" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
-        android:layout_height="408dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline"
         app:layout_constraintVertical_bias="1.0">
 
         <androidx.cardview.widget.CardView
@@ -494,5 +494,12 @@
         </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

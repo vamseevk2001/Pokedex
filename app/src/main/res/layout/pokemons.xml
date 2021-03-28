@@ -25,6 +25,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/pokeball_2" />
 
+
     <ImageView
             android:id="@+id/pokemon"
             android:layout_width="120dp"
