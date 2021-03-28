@@ -32,7 +32,7 @@
             android:id="@+id/intro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="This is a Pokedex app that has the data of almost all the pokemon of all the regions. You can filter out pokemon based on their type. You can even search for pokemon by their name.\n"
+            android:text="This app contains the data of almost all the pokemon of all the regions. You can filter out pokemon based on their type. You can even search for pokemon by their name.\n"
             android:textSize="18sp"
             android:textColor="@color/black"
             android:textStyle="italic"
