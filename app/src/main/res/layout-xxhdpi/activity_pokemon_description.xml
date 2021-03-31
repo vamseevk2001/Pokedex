@@ -21,7 +21,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/white"
         android:textFontWeight="1000"
-        android:textSize="60sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/poke_type_1"
         app:layout_constraintTop_toTopOf="parent" />
